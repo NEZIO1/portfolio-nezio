@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfólio — Guilherme Augusto Nézio
 
-## Getting Started
+Portfólio pessoal ([nezio.dev](https://nezio.dev)) de Guilherme Augusto Nézio, estudante de Análise e Desenvolvimento de Sistemas pela FIAP, voltado a oportunidades de estágio, trainee e vagas júnior em Full Stack, Java e Power BI.
 
-First, run the development server:
+## Stack
+
+- [Next.js 16](https://nextjs.org) (App Router, Turbopack)
+- TypeScript
+- Tailwind CSS v4
+- [shadcn/ui](https://ui.shadcn.com) (preset Vega, base Radix)
+- [motion](https://motion.dev) para animações de entrada
+- `next-themes` para o tema dark/light
+
+## Rodando localmente
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Outros scripts:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build         # build de produção
+npm run lint           # ESLint
+npm run format          # Prettier (grava)
+npm run format:check   # Prettier (só verifica)
+```
 
-## Learn More
+## Estrutura
 
-To learn more about Next.js, take a look at the following resources:
+O site é uma página única com scroll (`/`), com as seções montadas em `src/app/page.tsx`. Todo o conteúdo textual é data-driven, vindo de `src/content/*.ts` (tipado em `src/content/types.ts`) — nenhuma seção tem texto hardcoded no JSX. `CONTEUDO-ORIGINAL.md`, na raiz, é a fonte de verdade desse conteúdo.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+src/
+├── app/            # layout, page, sitemap, robots
+├── components/
+│   ├── layout/     # navbar, mobile nav, footer, theme toggle
+│   ├── sections/   # hero, about, journey, projects, skills, certificates, contact
+│   ├── shared/     # reveal, section-container, section-heading, skip-to-content
+│   ├── providers/  # theme-provider
+│   └── ui/         # componentes gerados pelo shadcn/ui
+├── content/        # dados tipados de cada seção
+├── hooks/          # use-scroll-spy
+└── lib/            # utils, metadata, structured-data
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Pendências
 
-## Deploy on Vercel
+Alguns campos ficam opcionais em `content/*.ts` até os arquivos correspondentes existirem (placeholder visual até lá):
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Imagens dos 6 projetos (`public/img/projects/`)
+- Currículo em PDF (`public/cv/`)
+- Arquivos dos certificados
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deploy
+
+Ainda não publicado. A forma mais simples é a [Vercel](https://vercel.com/new).
