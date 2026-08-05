@@ -11,10 +11,14 @@ const iconMap = { Github: GithubIcon, Linkedin: LinkedinIcon, Mail } as const;
 
 export function Contact() {
   return (
-    <section id="contato" className="py-20">
+    <section id="contato" aria-labelledby="contato-heading" className="py-20">
       <SectionContainer className="text-center">
         <Reveal>
-          <SectionHeading eyebrow="// Contato" title="Vamos conversar?" />
+          <SectionHeading
+            id="contato-heading"
+            eyebrow="// Contato"
+            title="Vamos conversar?"
+          />
         </Reveal>
 
         <Reveal delay={0.1} className="text-muted-foreground mx-auto max-w-lg">

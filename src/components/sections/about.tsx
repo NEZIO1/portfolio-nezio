@@ -5,10 +5,18 @@ import { about } from "@/content/about";
 
 export function About() {
   return (
-    <section id="sobre" className="border-border border-b py-20">
+    <section
+      id="sobre"
+      aria-labelledby="sobre-heading"
+      className="border-border border-b py-20"
+    >
       <SectionContainer>
         <Reveal>
-          <SectionHeading eyebrow="// Sobre" title="Sobre mim" />
+          <SectionHeading
+            id="sobre-heading"
+            eyebrow="// Sobre"
+            title="Sobre mim"
+          />
         </Reveal>
         <Reveal
           delay={0.1}

@@ -5,10 +5,18 @@ import { timeline } from "@/content/timeline";
 
 export function Journey() {
   return (
-    <section id="jornada" className="border-border border-b py-20">
+    <section
+      id="jornada"
+      aria-labelledby="jornada-heading"
+      className="border-border border-b py-20"
+    >
       <SectionContainer>
         <Reveal>
-          <SectionHeading eyebrow="// Jornada" title="Minha jornada" />
+          <SectionHeading
+            id="jornada-heading"
+            eyebrow="// Jornada"
+            title="Minha jornada"
+          />
         </Reveal>
 
         <div className="border-border max-w-2xl space-y-10 border-l pl-8">

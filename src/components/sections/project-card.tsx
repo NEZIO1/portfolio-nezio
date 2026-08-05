@@ -2,7 +2,6 @@ import { Badge } from "@/components/ui/badge";
 import {
   Card,
   CardHeader,
-  CardTitle,
   CardDescription,
   CardContent,
 } from "@/components/ui/card";
@@ -16,7 +15,12 @@ export function ProjectCard({ project }: { project: Project }) {
         <ProjectImage src={project.image} alt={project.name} />
       </div>
       <CardHeader>
-        <CardTitle>{project.name}</CardTitle>
+        <h3
+          data-slot="card-title"
+          className="font-heading text-base leading-normal font-medium"
+        >
+          {project.name}
+        </h3>
         <CardDescription>{project.description}</CardDescription>
       </CardHeader>
       <CardContent className="flex flex-wrap gap-2">

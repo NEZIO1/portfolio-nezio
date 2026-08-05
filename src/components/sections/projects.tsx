@@ -6,10 +6,18 @@ import { projects } from "@/content/projects";
 
 export function Projects() {
   return (
-    <section id="projetos" className="border-border border-b py-20">
+    <section
+      id="projetos"
+      aria-labelledby="projetos-heading"
+      className="border-border border-b py-20"
+    >
       <SectionContainer>
         <Reveal>
-          <SectionHeading eyebrow="// Projetos" title="Projetos" />
+          <SectionHeading
+            id="projetos-heading"
+            eyebrow="// Projetos"
+            title="Projetos"
+          />
         </Reveal>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

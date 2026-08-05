@@ -3,7 +3,6 @@ import { Award } from "lucide-react";
 import {
   Card,
   CardHeader,
-  CardTitle,
   CardDescription,
   CardContent,
 } from "@/components/ui/card";
@@ -14,10 +13,18 @@ import { certificates } from "@/content/certificates";
 
 export function Certificates() {
   return (
-    <section id="certificados" className="border-border border-b py-20">
+    <section
+      id="certificados"
+      aria-labelledby="certificados-heading"
+      className="border-border border-b py-20"
+    >
       <SectionContainer>
         <Reveal>
-          <SectionHeading eyebrow="// Certificados" title="Certificados" />
+          <SectionHeading
+            id="certificados-heading"
+            eyebrow="// Certificados"
+            title="Certificados"
+          />
         </Reveal>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -31,7 +38,12 @@ export function Certificates() {
                 <Card className="h-full">
                   <CardHeader>
                     <Award className="text-primary size-8" aria-hidden />
-                    <CardTitle className="mt-3">{cert.name}</CardTitle>
+                    <h3
+                      data-slot="card-title"
+                      className="font-heading mt-3 text-base leading-normal font-medium"
+                    >
+                      {cert.name}
+                    </h3>
                     {meta && <CardDescription>{meta}</CardDescription>}
                   </CardHeader>
                   {cert.fileUrl && (
