@@ -15,6 +15,7 @@ Objetivo do portfólio: conquistar oportunidades de Estágio, Trainee, Desenvolv
 ## Paleta de cores
 
 **Dark mode**
+
 - Background: #0A0A0A
 - Surface: #111111
 - Card: #18181B
@@ -23,6 +24,7 @@ Objetivo do portfólio: conquistar oportunidades de Estágio, Trainee, Desenvolv
 - Border: #27272A
 
 **Light mode**
+
 - Background: #FFFFFF
 - Surface: #F4F4F5
 - Primary: #7C3AED
@@ -67,12 +69,12 @@ Atualmente, continuo aprimorando minhas habilidades técnicas por meio de cursos
 
 ## Projetos
 
-1. **FinanSmart** — Aplicativo financeiro para gerenciamento de finanças pessoais. Tecnologias: Figma, UX/UI, Prototipação. Funcionalidades: Login, Cadastro, Dashboard, Extrato, Relatórios, Investimentos. Imagem: `img/finansmart.png` *(ainda não existe)*.
-2. **Fintech** — Sistema financeiro acadêmico desenvolvido com Java e Oracle Database. Tecnologias: Java, Oracle, SQL, DAO Pattern. Imagem: `img/fintech.png` *(ainda não existe)*.
-3. **Água Marinha** — Projeto Global Solution focado em conscientização ambiental e preservação dos oceanos. Tecnologias: Figma, UX/UI, Design Thinking. Imagem: `img/agua_marinha.png` *(ainda não existe)*.
-4. **HealthApp** — Aplicativo Android focado em monitoramento e bem-estar. Tecnologias: Kotlin, Jetpack Compose, Retrofit, Room Database. Imagem: `img/healthapp.png` *(ainda não existe)*.
-5. **Dashboard Power BI** — Projeto de Business Intelligence para análise de dados e tomada de decisão. Tecnologias: Power BI, DAX, Power Query. Imagem: `img/powerbi.png` *(ainda não existe)*.
-6. **ESG** — Projeto voltado para gestão de resíduos e reciclagem. Tecnologias: Oracle, SQL, PL/SQL. Imagem: `img/esg.png` *(ainda não existe)*.
+1. **FinanSmart** — Aplicativo financeiro para gerenciamento de finanças pessoais. Tecnologias: Figma, UX/UI, Prototipação. Funcionalidades: Login, Cadastro, Dashboard, Extrato, Relatórios, Investimentos. Imagem: `img/finansmart.png` _(ainda não existe)_.
+2. **Fintech** — Sistema financeiro acadêmico desenvolvido com Java e Oracle Database. Tecnologias: Java, Oracle, SQL, DAO Pattern. Imagem: `img/fintech.png` _(ainda não existe)_.
+3. **Água Marinha** — Projeto Global Solution focado em conscientização ambiental e preservação dos oceanos. Tecnologias: Figma, UX/UI, Design Thinking. Imagem: `img/agua_marinha.png` _(ainda não existe)_.
+4. **HealthApp** — Aplicativo Android focado em monitoramento e bem-estar. Tecnologias: Kotlin, Jetpack Compose, Retrofit, Room Database. Imagem: `img/healthapp.png` _(ainda não existe)_.
+5. **Dashboard Power BI** — Projeto de Business Intelligence para análise de dados e tomada de decisão. Tecnologias: Power BI, DAX, Power Query. Imagem: `img/powerbi.png` _(ainda não existe)_.
+6. **ESG** — Projeto voltado para gestão de resíduos e reciclagem. Tecnologias: Oracle, SQL, PL/SQL. Imagem: `img/esg.png` _(ainda não existe)_.
 
 ## Skills
 
