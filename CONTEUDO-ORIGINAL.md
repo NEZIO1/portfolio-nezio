@@ -59,7 +59,6 @@ Atualmente, continuo aprimorando minhas habilidades técnicas por meio de cursos
 
 ## Minha Jornada
 
-- **2023** — Ciências da Computação, UNIPAC: primeiro contato acadêmico com programação, lógica computacional e fundamentos da computação.
 - **2024** — Análise e Desenvolvimento de Sistemas, FIAP: início da formação focada em desenvolvimento de software.
 - **2024** — Desenvolvimento Web e UX/UI: HTML, CSS, JavaScript, Figma e prototipação.
 - **2024** — Certificações: Análise e Design Web 2.0; Desenvolvimento e Design Web 2.0; Análise de Sistemas e Prototipagem Web.
