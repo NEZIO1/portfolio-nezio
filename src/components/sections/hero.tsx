@@ -4,14 +4,17 @@ import fotoGuilherme from "@/assets/images/foto-guilherme.jpg";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/shared/reveal";
 import { SectionContainer } from "@/components/shared/section-container";
+import { ParticleLogo } from "@/components/canvas/particle-logo";
 import { site } from "@/content/site";
 
 export function Hero() {
   return (
     <section
       id="home"
-      className="border-border flex min-h-[calc(100vh-4rem)] items-center border-b"
+      className="border-border relative isolate flex min-h-[calc(100vh-4rem)] items-center overflow-hidden border-b"
     >
+      <ParticleLogo />
+
       <SectionContainer className="grid items-center gap-12 py-20 md:grid-cols-[1fr_auto]">
         <Reveal>
           <p className="text-primary text-sm font-medium">Olá, eu sou</p>
