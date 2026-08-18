@@ -1,5 +1,6 @@
 "use client";
 
+import { useSyncExternalStore } from "react";
 import dynamic from "next/dynamic";
 import { useTheme } from "next-themes";
 import { useReducedMotion } from "motion/react";
@@ -10,14 +11,33 @@ const GradientScene = dynamic(
   { ssr: false, loading: () => <StaticGradientFallback /> },
 );
 
+function subscribeNoop() {
+  return () => {};
+}
+
+function getClientSnapshot() {
+  return true;
+}
+
+function getServerSnapshot() {
+  return false;
+}
+
 export function WebglBackground() {
   const { resolvedTheme } = useTheme();
   const shouldReduceMotion = useReducedMotion();
+  // Servidor não sabe o tema, então sempre renderiza null (`getServerSnapshot`).
+  // No cliente, o React troca pra `getClientSnapshot` logo após a hidratação,
+  // sem disparar o erro de "hydration mismatch" — é o padrão recomendado pelo
+  // próprio React pra esse tipo de valor client-only, e não esbarra na regra
+  // de lint `react-hooks/set-state-in-effect` (não usa useState+useEffect).
+  const isMounted = useSyncExternalStore(
+    subscribeNoop,
+    getClientSnapshot,
+    getServerSnapshot,
+  );
 
-  // `resolvedTheme` vem undefined até o next-themes resolver no cliente —
-  // nesse meio-tempo (e no tema claro) simplesmente não renderiza nada; o
-  // fundo sólido normal de globals.css já cobre esse caso.
-  if (resolvedTheme !== "dark") return null;
+  if (!isMounted || resolvedTheme !== "dark") return null;
 
   return (
     // Primeira convenção de z-index do projeto: fundo fixo atrás de tudo.
