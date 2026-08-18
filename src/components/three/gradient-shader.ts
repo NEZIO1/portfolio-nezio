@@ -53,12 +53,18 @@ export const fragmentShader = /* glsl */ `
     vec2 uv = vUv * 2.0 - 1.0;
     uv.x *= uResolution.x / uResolution.y;
 
-    vec2 drift = vec2(uTime * 0.05, uTime * 0.03);
-    float n1 = fbm(uv * 1.2 + drift);
-    float n2 = fbm(uv * 1.8 - drift * 1.3 + 4.0);
+    vec2 drift = vec2(uTime * 0.04, uTime * 0.025);
+    float n1 = fbm(uv * 1.1 + drift);
+    float n2 = fbm(uv * 1.6 - drift * 1.3 + 4.0);
 
-    vec3 color = mix(uColorA, uColorB, smoothstep(0.0, 1.0, n1));
-    color = mix(color, uColorC, smoothstep(0.3, 0.9, n2) * 0.5);
+    // Só realça os picos do noise (em vez de misturar a tela toda) e limita
+    // a intensidade máxima: a maior parte da tela fica no fundo escuro, com
+    // a "névoa" roxa aparecendo em manchas sutis, não tomando conta de tudo.
+    float glowPrimary = smoothstep(0.55, 0.85, n1) * 0.55;
+    float glowHover = smoothstep(0.6, 0.95, n2) * 0.35;
+
+    vec3 color = mix(uColorA, uColorB, glowPrimary);
+    color = mix(color, uColorC, glowHover);
 
     gl_FragColor = vec4(color, 1.0);
   }
