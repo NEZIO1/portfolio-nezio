@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/providers/theme-provider";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { SkipToContent } from "@/components/shared/skip-to-content";
+import { WebglBackground } from "@/components/three/webgl-background";
 import { baseMetadata } from "@/lib/metadata";
 import { personJsonLd } from "@/lib/structured-data";
 
@@ -48,6 +49,7 @@ export default function RootLayout({
           defaultTheme="dark"
           enableSystem={false}
         >
+          <WebglBackground />
           <Navbar />
           <main id="main-content" className="flex-1">
             {children}
